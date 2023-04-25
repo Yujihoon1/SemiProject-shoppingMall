@@ -18,86 +18,59 @@
             <img src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg" class="img01">
           </div>
           <div class="title" name="title">
-            <h3>상품명</h3>
+            <h3 style="position:relative; left:15px;">상품명</h3>
           </div>
           <div class="info" style="border-top:1px solid black;">
-            <table>
-              <tbody>
-                <tr>
-                  <th scope="row">가격</th>
-                  <td>
-                    <span>
-                      <p id="prouct_price_selected">정해진 가격</p>
-                      <input id="product_price" name="product_price" value type="hidden">
-                    </span>
-                  </td>  
-                </tr>
-                <tr>
-                  <th scope="row">상품 간략 설명</th>
-                  <td>
-                    <p>상품 간략 설명 예시</p>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">색상</th>
-                   <td>
-                  <select name="option1">
+            <dl>
+  <dt>가격</dt>
+  <dd>정해진 가격</dd>
+</dl>
+<dl>
+  <dt>상품간략설명</dt>
+  <dd>상품 간략 설명 예시</dt>
+</dl>
+<dl>
+<dt>색상</dt>
+ <dd><select name="option1">
                     <option value='' selected>---선택해주세요----</option>
                     <option value="베이지">베이지색</option>
                     <option value="블랙">블랙</option>
                     <option value="화이트">화이트</option>
                   </select>
-                </td>
-                </tr>
-                <tr>
-                  <th scope="row">사이즈</th> 
-                  <td>
-                    <select name="option2">
+</dd>
+</dl>
+<dl>
+  <dt>사이즈</dt>
+  <dd><select name="option2">
                       <option value='' selected>---선택해주세요----</option>
                     </select>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div id="selected" style="border-top:1px solid black;">
-            <table id="table2">
-                            <colgroup>
-                <col style="width:250px">
-                <col style="width:100px;">
-                <col style="width:250px;">
-              </colgroup>
-              <thead>
-              <tr>
-                <th scope="col">상품명</th>
-                <th scope="col">상품수</t>
-              <th scope="col">가격</t>
-              </tr>
-              </thead>
-            <tbody class="option_number">
-              <tr class="option_number">
-                <td>
-                  <input type="hidden" class="option_box_id">
-                  <p class="product" name="title">상품명
-                  </p>  
-                </td>
-                <td>
-                  <span class="quantity">
+  </dd>
+  <dl class="dl_line1">
+    <dl>
+    <dt>상품명</dt>
+      <dd><b>상품 수</b> </dd>
+      <dd><b>가격</b></dd>
+    <dl>
+     <dl>
+       <dt>
+         <input type="hidden" class="">
+         <p class="product">상품명</p>
+       </dt>
+  <dd><span class="quantity">
                     <input type="text" style="width:20px;"id="option_quantity_box" name="quantity" value="1">
                     <a href="" class="quantity_up" onclick="quantity_up();"><img src="data:image/png;base64,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" style="width:15px;"></a>
                     <a href="" class="quantity_down" onclick="quantity_down();"><img style="width:15px; height:15px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG4YnkRw_RvVew5uZ36RsbpxhfVmJnc6Hmpg&usqp=CAU"></a>   
                   </span>
-                </td>
-                <td>
-                  <span>
+       </dd>
+  <dd>
+    <span class="dl_line1_span">
                     <input type="hidden" class="price" value="가격">가격
                   </span>
-                </td>
-              </tr>
-            </tbody>
-              </table>
-          
-          </div>
-        <div id="totalPrice" class="totalPrice" style="border-top:1px solid black; padding-top:15px;">
+      </dd>
+      </dl>
+      </dl>
+      <dl class="dl_line2">
+         <div id="totalPrice" class="totalPrice" style=" padding-top:15px;">
           <b>총 상품금액</b>
           <small>(갯수)</small>:
           <span class="total">
@@ -107,6 +80,8 @@
             (갯수)
           </span>
         </div>
+      <br>
+      
         <div class="buttons01">
           <a href="" class="buttonSubmit" onclick="product_submit(1,'',this)">
             <span id="btnBuy" s tyle="font-size: 15px;">구매하기</span></a>
