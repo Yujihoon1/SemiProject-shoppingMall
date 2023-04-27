@@ -212,10 +212,27 @@ h4{
   text-align:center;
 }
 .chosen{
-  font-weight:bold;
+  color:black;
 }
-.not_chosen{
+.unchosen{
   color:gray;
+}
+.best_newest_score{
+  position:relative;
+  left:140px;
+  cursor: pointer;
+}
+.review1{
+  position:relative;
+  left:140px;
+}
+.review2{
+  position:relative;
+  left:140px;
+}
+.review3{
+  position:relative;
+  left:140px;
 }
 .review01{
   margin:15px;
