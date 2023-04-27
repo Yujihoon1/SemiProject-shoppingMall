@@ -77,10 +77,47 @@
         $(".review2").css("display","none");
         $(".review3").css("display","");
       }
-
     });
 
+    $(".zoayo_btns1>a").click(function(){
+      var zoayocount = $(this).val();
+      var sireoyocount = $(this).val();
+      console.log(zoayocount);
 
+      if($(this).hasClass('zoayo')){
+        zoayocount = $(this).children("#zoayo_count").val();
+        $(this).children().css("background-color","skyblue");
+        $(this).attr('class','zoayo2');
+        $(this).children("#zoayo_count").val(++zoayocount);
+        console.log($("#zoayo_count").val());
+        $("#zoayo_count").text($(this).children("#zoayo_count").val());
+        
+      }else if($(this).hasClass('zoayo2')){
+        zoayocount = $(this).children("#zoayo_count").val();
+        $(this).children().css("background-color","white");
+        $(this).attr('class','zoayo');
+        $(this).children("#zoayo_count").val(--zoayocount);
+        $("#zoayo_count").text($(this).children("#zoayo_count").val());
+      
+      }else if($(this).hasClass('sireoyo')){
+        sireoyocount = $(this).children("#sireoyo_count").val();
+        $(this).children().css("background-color","red");
+        $(this).attr('class','sireoyo2');
+        sireoyocount = ++sireoyocount;
+        $(this).children("#sireoyo_count").val(sireoyocount);
+        $("#sireoyo_count").text($(this).children("#sireoyo_count").val());
+      
+      }else if($(this).hasClass('sireoyo2')){
+        sireoyocount = $(this).children("#sireoyo_count").val();
+        console.log(sireoyocount);
+        $(this).children().css("background-color","white");
+        $(this).attr('class','sireoyo');
+        sireoyocount = --sireoyocount;
+        $(this).children("#sireoyo_count").val(sireoyocount);
+        $("#sireoyo_count").text($(this).children("#sireoyo_count").val());
+      }
+
+    });
   }); 
 </script>
     <link rel="stylesheet" href="./detail.css">
@@ -109,8 +146,8 @@
 </dl>
 <dl>
 <dt>색상</dt>
- <dd><select name="option1" id="option1">
-                    <option value='' selected>---선택해주세요----</option>
+ <dd><select class="option1" name="option1" id="option1">
+                    <option value='' selected>----선택해주세요-----</option>
                     <option value="베이지">베이지색</option>
                     <option value="블랙">블랙</option>
                     <option value="화이트">화이트</option>
@@ -119,8 +156,8 @@
 </dl>
 <dl>
   <dt>사이즈</dt>
-  <dd><select name="option2" id="option2">
-                      <option value='' selected>---선택해주세요----</option>
+  <dd><select class="option2" name="option2" id="option2">
+                      <option value='' selected>----선택해주세요-----</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
@@ -143,7 +180,7 @@
        </dt>
   <dd>
     <span>
-    <input style="width:30px;" id="productCount" class="productCount" type="number" min="0" value="0"> 
+    <input style="width:30px; position:relative; left:8px;" id="productCount" class="productCount" type="number" min="0" value="0"> 
   </span>
        </dd>
   <dd>
@@ -273,15 +310,15 @@
        <div class="review01" id="1">
          <img class="review01_img" src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg">
          <div class="reviewer01">작성자1</div>
-         <div class=
-"review01_content">리뷰 내용 
+         <div class="review01_content">리뷰 내용 
          </div>
          <div class="zoayo_btns1">
-           <a onclick="">
-             <span>좋아요</span>
-           </a>
-           <a onclick="">
-             <span>싫어요</span>
+           <a class="zoayo">
+            <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+          </a>
+          <a class="sireoyo">
+            <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+            <span id="sireoyo_count" value="0">0</span>
            </a>
          </div>
        </div>
@@ -295,11 +332,12 @@
 "review01_content">리뷰 내용 
          </div>
          <div class="zoayo_btns2">
-           <a onclick="">
-             <span>좋아요</span>
-           </a>
-           <a onclick="">
-             <span>싫어요</span>
+           <a class="zoayo">
+            <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+          </a>
+          <a class="sireoyo">
+            <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+            <span id="sireoyo_count" value="0">0</span>
            </a>
          </div>
        </div>
@@ -313,11 +351,13 @@
 "review03_content">리뷰 내용 
          </div>
          <div class="zoayo_btns3">
-           <a onclick="">
-             <span>좋아요</span>
-           </a>
-           <a onclick="">
-             <span>싫어요</span>
+           <a class="zoayo">
+            <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+            <span id="zoayo_count" value="0">0</span>
+          </a>
+          <a class="sireoyo">
+            <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+            <span id="sireoyo_count" value="0">0</span>
            </a>
          </div>
        </div>
@@ -332,11 +372,13 @@
  "review01_content">리뷰 내용 
           </div>
           <div class="zoayo_btns2">
-            <a onclick="">
-              <span>좋아요</span>
+            <a class="zoayo">
+              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+              <span id="zoayo_count" value="0">0</span>
             </a>
-            <a onclick="">
-              <span>싫어요</span>
+            <a class="sireoyo">
+              <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+              <span id="sireoyo_count" value="0">0</span>
             </a>
           </div>
         </div>
@@ -350,11 +392,13 @@
      "review01_content">리뷰 내용 
               </div>
               <div class="zoayo_btns1">
-                <a onclick="">
-                  <span>좋아요</span>
+                <a class="zoayo">
+                  <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+                  <span id="zoayo_count" value="0">0</span>
                 </a>
-                <a onclick="">
-                  <span>싫어요</span>
+                <a class="sireoyo">
+                  <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+                  <span id="sireoyo_count" value="0">0</span>
                 </a>
               </div>
             </div>
@@ -367,11 +411,13 @@
  "review03_content">리뷰 내용 
           </div>
           <div class="zoayo_btns3">
-            <a onclick="">
-              <span>좋아요</span>
+            <a class="zoayo">
+              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+              <span id="zoayo_count" value="0">0</span>
             </a>
-            <a onclick="">
-              <span>싫어요</span>
+            <a class="sireoyo">
+              <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+              <span id="sireoyo_count" value="0">0</span>
             </a>
           </div>
         </div>
@@ -381,15 +427,15 @@
         <div class="review01">
           <img class="review01_img" src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg">
           <div class="reviewer01">작성자1</div>
-          <div class=
- "review01_content">리뷰 내용 
+          <div class="review01_content">리뷰 내용 
           </div>
           <div class="zoayo_btns1">
-            <a onclick="">
-              <span>좋아요</span>
+            <a class="zoayo">
+              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
             </a>
-            <a onclick="">
-              <span>싫어요</span>
+            <a class="sireoyo">
+              <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+              <span id="sireoyo_count" value="0">0</span>
             </a>
           </div>
         </div>
@@ -399,33 +445,33 @@
             <div class="review03">
               <img class="review03_img" src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg">
                 <div class="reviewer03">작성자3</div>
-              <div class=
-     "review03_content">리뷰 내용 
+              <div class="review03_content">리뷰 내용 
               </div>
               <div class="zoayo_btns3">
-                <a onclick="">
-                  <span>좋아요</span>
-                </a>
-                <a onclick="">
-                  <span>싫어요</span>
+              <a class="zoayo">
+                <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+              </a>
+              <a class="sireoyo">
+                <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png" >
+                <span id="sireoyo_count" value="0">0</span>
                 </a>
               </div>
             </div>
             <div style="border-top: 0.5px solid gray; width:880px;">
             </div>
-            
+
           <div class="review02">
           <img class="review02_img" src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg">
             <div class="reviewer02">작성자2</div>
-          <div class=
- "review01_content">리뷰 내용 
+          <div class="review01_content">리뷰 내용 
           </div>
           <div class="zoayo_btns2">
-            <a onclick="">
-              <span>좋아요</span>
+            <a class="zoayo">
+              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
             </a>
-            <a onclick="">
-              <span>싫어요</span>
+            <a class="sireoyo">
+              <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
+              <span id="sireoyo_count" value="0">0</span>
             </a>
           </div>
         </div>

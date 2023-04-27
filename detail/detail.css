@@ -53,7 +53,8 @@ display:inline-block;
 width:400px;
 }
 select{
-
+  width:140px;
+  height: 22px;
 }
 .dl_line1{
 border-top:0.5px solid gray;
@@ -234,6 +235,28 @@ h4{
   position:relative;
   left:140px;
 }
+.zoayo_icon{
+  height: 20px; 
+  position: relative;
+  width: 20px;
+  left: 585px;
+}
+.sireoyo_icon{
+  height: 20px; 
+  position: relative;
+  width: 20px;
+  left: 590px;
+}
+.zoayo_count{
+  position: relative;
+  bottom:4px;
+  width: 30px;
+}
+.sireoyo_count{
+  position: relative;
+  bottom:10px;
+  width: 30px;
+}
 .review01{
   margin:15px;
   height:160px;
@@ -262,7 +285,8 @@ h4{
 .zoayo_btns1{
   position:relative;
   top: -140px;
- left: 150px;
+ left: 140px;
+ cursor: pointer;
 }
 .zoayo_btns1 a span{
   padding :2px;
@@ -298,7 +322,8 @@ h4{
 .zoayo_btns2{
   position:relative;
   top: -140px;
- left: 150px;
+ left: 140px;
+ cursor: pointer;
 }
 .zoayo_btns2 a span{
   padding :2px;
@@ -333,7 +358,8 @@ h4{
 .zoayo_btns3{
   position:relative;
   top: -140px;
- left: 150px;
+ left: 140px;
+ cursor: pointer;
 }
 .zoayo_btns3 a span{
   padding :2px;
