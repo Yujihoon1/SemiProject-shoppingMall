@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapper namespace="mypage">
+	
+	<select id="mypageSelectOne">
+		select * 
+		from spmuser
+		where userID = ${userID}
+	</select>
+</mapper>

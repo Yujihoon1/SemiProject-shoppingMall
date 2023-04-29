@@ -82,42 +82,113 @@
     $(".zoayo_btns1>a").click(function(){
       var zoayocount = $(this).val();
       var sireoyocount = $(this).val();
-      console.log(zoayocount);
 
       if($(this).hasClass('zoayo')){
-        zoayocount = $(this).children("#zoayo_count").val();
+        zoayocount = $(this).children("#zoayo_count1").val();
         $(this).children().css("background-color","skyblue");
         $(this).attr('class','zoayo2');
-        $(this).children("#zoayo_count").val(++zoayocount);
-        console.log($("#zoayo_count").val());
-        $("#zoayo_count").text($(this).children("#zoayo_count").val());
+        $(this).children("#zoayo_count1").val(++zoayocount);
+        $("#zoayo_count1").text($(this).children("#zoayo_count1").val());
         
       }else if($(this).hasClass('zoayo2')){
-        zoayocount = $(this).children("#zoayo_count").val();
+        zoayocount = $(this).children("#zoayo_count1").val();
         $(this).children().css("background-color","white");
         $(this).attr('class','zoayo');
-        $(this).children("#zoayo_count").val(--zoayocount);
-        $("#zoayo_count").text($(this).children("#zoayo_count").val());
+        $(this).children("#zoayo_count1").val(--zoayocount);
+        $("#zoayo_count1").text($(this).children("#zoayo_count1").val());
       
       }else if($(this).hasClass('sireoyo')){
-        sireoyocount = $(this).children("#sireoyo_count").val();
+        sireoyocount = $(this).children("#sireoyo_count1").val();
         $(this).children().css("background-color","red");
         $(this).attr('class','sireoyo2');
         sireoyocount = ++sireoyocount;
-        $(this).children("#sireoyo_count").val(sireoyocount);
-        $("#sireoyo_count").text($(this).children("#sireoyo_count").val());
+        $(this).children("#sireoyo_count1").val(sireoyocount);
+        $("#sireoyo_count1").text($(this).children("#sireoyo_count1").val());
       
       }else if($(this).hasClass('sireoyo2')){
-        sireoyocount = $(this).children("#sireoyo_count").val();
-        console.log(sireoyocount);
+        sireoyocount = $(this).children("#sireoyo_count1").val();
         $(this).children().css("background-color","white");
         $(this).attr('class','sireoyo');
         sireoyocount = --sireoyocount;
-        $(this).children("#sireoyo_count").val(sireoyocount);
-        $("#sireoyo_count").text($(this).children("#sireoyo_count").val());
+        $(this).children("#sireoyo_count1").val(sireoyocount);
+        $("#sireoyo_count1").text($(this).children("#sireoyo_count1").val());
       }
-
     });
+
+    $(".zoayo_btns2>a").click(function(){
+      var zoayocount = $(this).val();
+      var sireoyocount = $(this).val();
+      console.log(zoayocount);
+
+      if($(this).hasClass('zoayo')){
+        zoayocount = $(this).children("#zoayo_count2").val();
+        $(this).children().css("background-color","skyblue");
+        $(this).attr('class','zoayo2');
+        $(this).children("#zoayo_count2").val(++zoayocount);
+        console.log($("#zoayo_count2").val());
+        $("#zoayo_count2").text($(this).children("#zoayo_count2").val());
+        
+      }else if($(this).hasClass('zoayo2')){
+        zoayocount = $(this).children("#zoayo_count2").val();
+        $(this).children().css("background-color","white");
+        $(this).attr('class','zoayo');
+        $(this).children("#zoayo_count2").val(--zoayocount);
+        $("#zoayo_count2").text($(this).children("#zoayo_count2").val());
+      
+      }else if($(this).hasClass('sireoyo')){
+        sireoyocount = $(this).children("#sireoyo_count2").val();
+        $(this).children().css("background-color","red");
+        $(this).attr('class','sireoyo2');
+        sireoyocount = ++sireoyocount;
+        $(this).children("#sireoyo_count2").val(sireoyocount);
+        $("#sireoyo_count2").text($(this).children("#sireoyo_count2").val());
+      
+      }else if($(this).hasClass('sireoyo2')){
+        sireoyocount = $(this).children("#sireoyo_count2").val();
+        $(this).children().css("background-color","white");
+        $(this).attr('class','sireoyo');
+        sireoyocount = --sireoyocount;
+        $(this).children("#sireoyo_count2").val(sireoyocount);
+        $("#sireoyo_count2").text($(this).children("#sireoyo_count2").val());
+      }
+    });
+
+    $(".zoayo_btns3>a").click(function(){
+      var zoayocount = $(this).val();
+      var sireoyocount = $(this).val();
+
+      if($(this).hasClass('zoayo')){
+        zoayocount = $(this).children("#zoayo_count3").val();
+        $(this).children().css("background-color","skyblue");
+        $(this).attr('class','zoayo2');
+        $(this).children("#zoayo_count3").val(++zoayocount);
+        $("#zoayo_count3").text($(this).children("#zoayo_count3").val());
+        
+      }else if($(this).hasClass('zoayo2')){
+        zoayocount = $(this).children("#zoayo_count3").val();
+        $(this).children().css("background-color","white");
+        $(this).attr('class','zoayo');
+        $(this).children("#zoayo_count3").val(--zoayocount);
+        $("#zoayo_count3").text($(this).children("#zoayo_count3").val());
+      
+      }else if($(this).hasClass('sireoyo')){
+        sireoyocount = $(this).children("#sireoyo_count3").val();
+        $(this).children().css("background-color","red");
+        $(this).attr('class','sireoyo2');
+        sireoyocount = ++sireoyocount;
+        $(this).children("#sireoyo_count3").val(sireoyocount);
+        $("#sireoyo_count3").text($(this).children("#sireoyo_count3").val());
+      
+      }else if($(this).hasClass('sireoyo2')){
+        sireoyocount = $(this).children("#sireoyo_count3").val();
+        $(this).children().css("background-color","white");
+        $(this).attr('class','sireoyo');
+        sireoyocount = --sireoyocount;
+        $(this).children("#sireoyo_count3").val(sireoyocount);
+        $("#sireoyo_count3").text($(this).children("#sireoyo_count3").val());
+      }
+    });
+
   }); 
 </script>
     <link rel="stylesheet" href="./detail.css">
@@ -314,11 +385,12 @@
          </div>
          <div class="zoayo_btns1">
            <a class="zoayo">
-            <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+            <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+            <span id="zoayo_count1" value="0">0</span>
           </a>
           <a class="sireoyo">
             <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-            <span id="sireoyo_count" value="0">0</span>
+            <span id="sireoyo_count1" value="0">0</span>
            </a>
          </div>
        </div>
@@ -333,11 +405,12 @@
          </div>
          <div class="zoayo_btns2">
            <a class="zoayo">
-            <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+            <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+            <span id="zoayo_count2" value="0">0</span>
           </a>
           <a class="sireoyo">
             <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-            <span id="sireoyo_count" value="0">0</span>
+            <span id="sireoyo_count2" value="0">0</span>
            </a>
          </div>
        </div>
@@ -353,11 +426,11 @@
          <div class="zoayo_btns3">
            <a class="zoayo">
             <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
-            <span id="zoayo_count" value="0">0</span>
+            <span id="zoayo_count3" value="0">0</span>
           </a>
           <a class="sireoyo">
             <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-            <span id="sireoyo_count" value="0">0</span>
+            <span id="sireoyo_count3" value="0">0</span>
            </a>
          </div>
        </div>
@@ -368,17 +441,16 @@
           <div class="review02">
           <img class="review02_img" src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg">
             <div class="reviewer02">작성자2</div>
-          <div class=
- "review01_content">리뷰 내용 
+          <div class="review01_content">리뷰 내용 
           </div>
           <div class="zoayo_btns2">
             <a class="zoayo">
               <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
-              <span id="zoayo_count" value="0">0</span>
+              <span id="zoayo_count1" value="0">0</span>
             </a>
             <a class="sireoyo">
               <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-              <span id="sireoyo_count" value="0">0</span>
+              <span id="sireoyo_count1" value="0">0</span>
             </a>
           </div>
         </div>
@@ -388,17 +460,16 @@
             <div class="review01">
               <img class="review01_img" src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg">
               <div class="reviewer01">작성자1</div>
-              <div class=
-     "review01_content">리뷰 내용 
+              <div class="review01_content">리뷰 내용 
               </div>
               <div class="zoayo_btns1">
                 <a class="zoayo">
                   <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
-                  <span id="zoayo_count" value="0">0</span>
+                  <span id="zoayo_count2" value="0">0</span>
                 </a>
                 <a class="sireoyo">
                   <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-                  <span id="sireoyo_count" value="0">0</span>
+                  <span id="sireoyo_count2" value="0">0</span>
                 </a>
               </div>
             </div>
@@ -407,17 +478,16 @@
           <div class="review03">
           <img class="review03_img" src="https://maninstore.co.kr/web/product/big/202010/195007a2e2b86ac797f59323012ab124.jpg">
             <div class="reviewer03">작성자3</div>
-          <div class=
- "review03_content">리뷰 내용 
+          <div class="review03_content">리뷰 내용 
           </div>
           <div class="zoayo_btns3">
             <a class="zoayo">
               <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
-              <span id="zoayo_count" value="0">0</span>
+              <span id="zoayo_count3" value="0">0</span>
             </a>
             <a class="sireoyo">
               <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-              <span id="sireoyo_count" value="0">0</span>
+              <span id="sireoyo_count3" value="0">0</span>
             </a>
           </div>
         </div>
@@ -431,11 +501,12 @@
           </div>
           <div class="zoayo_btns1">
             <a class="zoayo">
-              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+              <span id="zoayo_count1" value="0">0</span>
             </a>
             <a class="sireoyo">
               <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-              <span id="sireoyo_count" value="0">0</span>
+              <span id="sireoyo_count1" value="0">0</span>
             </a>
           </div>
         </div>
@@ -449,11 +520,12 @@
               </div>
               <div class="zoayo_btns3">
               <a class="zoayo">
-                <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+                <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+                <span id="zoayo_count2" value="0">0</span>
               </a>
               <a class="sireoyo">
                 <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png" >
-                <span id="sireoyo_count" value="0">0</span>
+                <span id="sireoyo_count2" value="0">0</span>
                 </a>
               </div>
             </div>
@@ -467,11 +539,12 @@
           </div>
           <div class="zoayo_btns2">
             <a class="zoayo">
-              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png"><span id="zoayo_count" value="0">0</span>
+              <img class="zoayo_icon" src="../icon/icons8-thumbs-up-64.png">
+              <span id="zoayo_count3" value="0">0</span>
             </a>
             <a class="sireoyo">
               <img class="sireoyo_icon" src="../icon/icons8-thumbs-down-64.png">
-              <span id="sireoyo_count" value="0">0</span>
+              <span id="sireoyo_count3" value="0">0</span>
             </a>
           </div>
         </div>

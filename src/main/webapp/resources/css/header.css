@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+h1 {
+    /* background-color: yellow; */
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 10pt;
+}
+
+
+h2 {
+    text-align: center;
+    display: block;
+    width: 1500px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+span {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+}
+
+/* 헤더 관련 부분 */
+
+
+#header {
+    position: relative;
+
+}
+
+#header .inner {
+    position: relative;
+    /* width: 1218px; */
+    width: 1800px;
+    margin: 0 auto;
+    /* display: block; */
+}
+
+#header .topArea {
+    height: 110px;
+    padding: 32px 0 0;
+    text-align: center;
+}
+
+#mySearch {
+    display: inline-block;
+    size: maxlength;
+    height: 25px;
+}
+.button{
+    display: inline-block;
+    margin-right: 5px;
+}
+.btn {
+    width: 45px;
+    height: 25px;
+}
+
+
+
+.statelogoff {
+    display: block;
+    float: right;
+    height: 31px;
+    line-height: 50px;
+}
+
+.statelogoff a {
+    padding: 0 4px 0 10px;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 1px;
+}
+
+.logotop {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1.logotop {
+    display: block;
+    text-align: center;
+}
+
+hr.layout {
+    display: none;
+}
+
+
+/* 내비게이션 바 */
+.navi_bg {
+    padding-top: 0px;
+}
+
+
+.nav {
+    display: flex;
+    align-content: center;
+    justify-content:center;
+    height: 60px;
+
+}
+
+.navi_set {
+    position: relative;
+    float:left;
+    text-align: center;
+    padding: 0;
+    padding-bottom: auto;
+    width: 250px;
+    font-size: 25px;
+    margin: auto;
+    z-index: 100;
+}
+
+
+.navi_set a{
+    text-align: center;
+}
+
+.nav>li ul {
+    display: none;
+    /* background-color: brown; */
+    width: 0%;
+}
+
+.nav>li ul li a {
+    color: black;
+}
+
+.nav>li ul li:hover {
+    background-color: #778da9;
+    transition-duration: 0.5s;
+}
+
+
+.nav>li:hover ul{
+    display: block;
+}
+
+.navi_bg {
+    padding: 20px 40px;
+    width: 1210px;
+    margin: 0 auto;
+}
+
+
+
+.topnav {
+    text-align: center;
+    height: 52px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 50px;
+    /* background-color: blueviolet; */
+}
+
+.topnav a {
+    display: block;
+    font-size: 24px;
+    /* text-align: center; */
+}
+
+
+.subnav {
+    position: absolute;
+    /* left: 0; */
+    top: 50px;
+    z-index: 100;
+}
+
+.subnav li {
+    padding: 8px;
+    /* width: 105px; */
+    width: 125px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    margin-left: 40px;
+    font-size: 20px;
+    font-family: bold;
+}
+
+
+/*---------- header 끝--------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                             푸터                          */
+footer {
+
+    width: 100%;
+    /* background-color: black; */
+    text-align: center;
+    padding-top: 100px;
+    display: block;
+}

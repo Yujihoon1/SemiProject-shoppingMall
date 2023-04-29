@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>쇼핑몰메인</title>
+</head>
+
+<body>
+    <script src="main1.js"></script>
+    <!--      header      -->
+    <div id="header">
+        <div class="inner">
+            <div class="statelogoff">
+                <form>
+                    <div>
+                        <input type="search" id="mySearch" placeholder="상품 검색">
+                        <button class="btn">검색</button>
+                    </div>
+                </form>
+
+                <a href="#" class="log">로그인</a>
+                <a href="#" class="tooltipTarget">회원가입</a>
+                <a href="#" >장바구니</a>
+                <a href="#" >주문조회</a>
+                <a href="#" >고객센터</a>
+            </div>
+            <div class="topArea">
+                <h1 class="logotop">
+                    <a href="#">
+                        <img src="logo.png" alt="어반모아">
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <hr class="layout">
+
+    <!--             header 끝                  -->
+
+
+
+    <!--          내비게이션 바             -->
+    <div class="navi_bg">
+        <div class="nav">
+            <li class="navi_set">
+                <div class="topnav">
+                    <a href="#">BEST</a>
+                </div>
+                <ul class="subnav">
+                    <li><a href="#">BEST</a></li>
+                </ul>
+            </li>
+            <li class="navi_set">
+                <div class="topnav">
+                    <a href="#">NEW</a>
+                </div>
+                <ul class="subnav">
+                    <li><a href="#">NEW</a></li>
+                </ul>
+            </li>
+            <li class="navi_set">
+                <div class="topnav">
+                    <a href="#">OUTER</a>
+                </div>
+                <ul class="subnav">
+                    <li><a href="#">자켓</a></li>
+                    <li><a href="#">코트</a></li>
+                    <li><a href="#">점퍼</a></li>
+                    <li><a href="#">패딩</a></li>
+                    <li><a href="#">집업</a></li>
+                </ul>
+            </li>
+            <li class="navi_set">
+                <div class="topnav">
+                    <a href="#">TOP</a>
+                </div>
+                <ul class="subnav">
+                    <li><a href="#">맨투맨</a></li>
+                    <li><a href="#">후드</a></li>
+                    <li><a href="#">긴팔티</a></li>
+                    <li><a href="#">반팔</a></li>
+                    <li><a href="#">니트</a></li>
+                </ul>
+            </li>
+            <li class="navi_set">
+                <div class="topnav">
+                    <a href="#">SHIRT</a>
+                </div>
+                <ul class="subnav">
+                    <li><a href="#">기본</a></li>
+                    <li><a href="#">체크</a></li>
+                    <li><a href="#">데님셔츠</a></li>
+                    <li><a href="#">패턴</a></li>
+                    <li><a href="#">반팔</a></li>
+                </ul>
+            </li>
+            <li class="navi_set">
+                <div class="topnav">
+                    <a href="#">PANTS</a>
+                </div>
+                <ul class="subnav">
+                    <li><a href="#">청바지</a></li>
+                    <li><a href="#">슬랙스</a></li>
+                    <li><a href="#">면바지</a></li>
+                    <li><a href="#">반바지</a></li>
+                    <li><a href="#">밴딩</a></li>
+                </ul>
+            </li>
+            <li class="navi_set">
+                <div class="topnav">
+                    <a href="#">SUIT</a>
+                </div>
+                <ul class="subnav">
+                    <li><a href="#">SUIT</a></li>
+                </ul>
+            </li>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="section">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <div class="slidewrap">
+                
+                <ul class="slidelist">
+                    <!-- 슬라이드 영역 -->
+                    <li class="slideitem">
+                        <a href="#">
+                            <img src="resource/img/slide/slide1.jpg">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a href="#">
+                            <img src="resource/img/slide/slide2.jpg">
+                        </a>
+                    </li>
+                    <li class="slideitem">
+                        <a href="#">
+                            <img src="resource/img/slide/slide3.jpg">
+                        </a>
+                    </li class="slideitem">
+        
+                    <!-- 좌,우 슬라이드 버튼 -->
+                    <div class="slide-control">
+                        <div>
+                            <label for="slide03" class="left"></label>
+                            <label for="slide02" class="right"></label>
+                        </div>
+                        <div>
+                            <label for="slide01" class="left"></label>
+                            <label for="slide03" class="right"></label>
+                        </div>
+                        <div>
+                            <label for="slide02" class="left"></label>
+                            <label for="slide01" class="right"></label>
+                        </div>
+                    </div>
+        
+                </ul>
+                <!-- 페이징 -->
+                <ul class="slide-pagelist">
+                    <li><label for="slide01"></label></li>
+                    <li><label for="slide02"></label></li>
+                    <li><label for="slide03"></label></li>
+                </ul>
+            </div>
+        </div>
+
+        
+<div class="pro-wrap">
+    <ul class="pro-list">
+        <h2>NEW ITEM</h2>
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img1-1.jpg">
+                </div>
+                <div class="price_body">
+                    <div class ="text">
+                        <p class="pro_text">무드 핸드메이드 자켓(2color)</p>
+                            <div class="price">
+                                <p class="pro_price">169,000원</p>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        </li>    
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img1-2.jpg">
+                </div>
+                <div class="price_body">
+                    <div class ="text">
+                        <p class="pro_text">메리노울 오버사이즈 빅하트 가디건 (3color)</p>
+                            <div class="price">
+                                <p class="pro_price">65,000원</p>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        </li> 
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img1-3.jpg">
+                </div>
+                <div class="price_body">
+                    <div class ="text">
+                        <p class="pro_text">메리노울 오버사이즈 터틀넥 빅하트 니트(4color)</p>
+                            <div class="price">
+                                <p class="pro_price">60,000원</p>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        </li> 
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img1-4.jpg">
+                </div>
+                <div class="price_body">
+                    <div class ="text">
+                        <p class="pro_text">스트라이프 메리노울 터틀넥 빅하트 니트</p>
+                            <div class="price">
+                                <p class="pro_price">60,000원</p>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <br>
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img2-1.jpg">
+                </div>
+                <div class="price_body">
+                    <div class ="text">
+                        <p class="pro_text">시티 벌룬 팬츠 (3color)</p>
+                            <div class="price">
+                                <p class="pro_price">44,000원</p>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img2-2.jpg">
+                </div>
+                <div class="price_body">
+                    <div class ="text">
+                        <p class="pro_text">시티 벌룬 후드 (3color)</p>
+                            <div class="price">
+                                <p class="pro_price">47,000원</p>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        </li> 
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img2-3.jpg">
+                </div>
+                <div class="price_body">
+                    <div class ="text">
+                        <p class="pro_text">릴리브 숏 야상패딩(2color)</p>
+                            <div class="price">
+                                <p class="pro_price">119,000원</p>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        </li> 
+        <li>
+            <a href="#">
+                <div class="thum">
+                    <img src="resource/img/img2-4.jpg">
+                </div>
+                <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">리플 항아리 후드 점퍼패딩 (3color)</p>
+                        <div class="price">
+                            <p class="pro_price">129,000원</p>
+                        </div>
+                </div>
+                </div>
+            </a>
+        </li> 
+    </ul>
+</div>
+
+<div class="pro-wrap">
+<ul class="pro-list2">
+    <h2>BEST ITEM</h2>
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img3-1.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">캐피 박스 팬츠 (4color)</p>
+                        <div class="price">
+                            <p class="pro_price">28,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li>    
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img3-2.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">캐피 박스 반팔티 (4color)</p>
+                        <div class="price">
+                            <p class="pro_price">28,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img3-3.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">웨이브 반바지 (5color)</p>
+                        <div class="price">
+                            <p class="pro_price">36,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img3-4.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">웨이브 맨투맨 (5color)</p>
+                        <div class="price">
+                            <p class="pro_price">38,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <br>
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img4-1.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">칸프 남방 (4color)</p>
+                        <div class="price">
+                            <p class="pro_price">56,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img4-2.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">레스반 반바지 (5color)</p>
+                        <div class="price">
+                            <p class="pro_price">36,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img4-3.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">린넨 아메카지 팬츠 (2color)</p>
+                        <div class="price">
+                            <p class="pro_price">40,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li> 
+    <li>
+        <a href="#">
+            <div class="thum">
+                <img src="resource/img/img4-4.jpg">
+            </div>
+            <div class="price_body">
+                <div class ="text">
+                    <p class="pro_text">무드 핸드메이드 자켓(2color)</p>
+                        <div class="price">
+                            <p class="pro_price">169,000원</p>
+                        </div>
+                </div>
+            </div>
+        </a>
+    </li> 
+</ul>
+</div>
+</div>
+
+<footer>
+<!-- 상단 이동하기 버튼 -->
+<div id="goto-top"> 
+    <!-- <a href="#header"> -->
+        <img src="https://www.topten10mall.com/front/img/ssts/common/PC_scroll_top.png" style="width: 50px;"> 
+    <!-- </a> -->
+</div>
+<div class="chat">
+    <img src="resource/img/chat/480px-OpenMoji-black_1F469-200D-1F680.svg.png" style="width: 50px;"> 
+</div>
+<span>㈜멀티캠퍼스 : 서울특별시 강남구 언주로 508 14층(역삼동, 서울상록빌딩)</span><br>
+<span>대표이사 : 정석목사업자등록번호 : 104-81-53114통신판매신고번호 : 제2016-서울강남-00515호개인정보관리 최고책임자 : 임영관 이사</span><br>
+<span>Copyright by Multicampus Co., Ltd. All rights reserved.</span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
