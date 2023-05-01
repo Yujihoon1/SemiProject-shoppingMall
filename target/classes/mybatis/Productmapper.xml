@@ -1,1 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="spmproduct">
+
+	<resultMap type="productDto" id="productMap">
+		<result property="productnumber" column="PRODUCTNUMBER" />
+		<result property="productname" column="PRODUCTNAME" />
+		<result property="productcontent" column="PRODUCTCONTENT" />
+		<result property="productcategory" column="PRODUCTCATEGORY" />
+		<result property="productcolor" column="PRODUCTCOLOR" />
+		<result property="productsize" column="PRODUCTSIZE" />
+		<result property="productcount" column="PRODUCTCOUNT" />
+	</resultMap>
+	<select id="showMain" resultType="productDto">
+		SELECT *
+		FROM SPMPRODUCT
+		ORDER BY PRODUCTNUMBER DESC
+	</select>
+
+	<select id="showDetail" parameterType="int" resultMap="ProductMap">
+		SELECT *
+		FROM SPMPRODUCT
+		WHERE PRODUCTNUMBER=#{productnumber}
+	</select>
