@@ -5,12 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../resources/css/main.css">
+    <link rel="stylesheet" href="./main.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript">
         let num = 1;
         let num_left=num-1;
         let num_right= num+1;
+
+        var intervalId = setInterval(automove, 3000);
+
+        function stopInterval (intervalId) {
+          clearInterval(intervalId);
+        }
+
+        setTimeout(stopInterval, 60000, intervalId)
+
+        function automove(){
+            num++;
+            num_left++;
+            num_right++;
+            if(num>4){
+                num=1;
+            }
+            if(num_right==5){
+                num_right=1;
+            }
+            if(num_left==5){
+                num_left=1;
+            }
+            document.getElementById("gallery_left").src= "./a0"+(num_left)+".jpg";
+            document.getElementById("gallery_center").src= "./a0"+num+".jpg";
+            document.getElementById("gallery_right").src= "./a0"+(num_right)+".jpg";
+            return false;
+            
+        };
 
         function prev(){
             num--;
@@ -23,9 +51,9 @@
             }else if(num_right==0){
                 num_right=4;
             }
-            document.getElementById("gallery_left").src= "../../resources/image/a0"+(num_left)+".jpg";
-            document.getElementById("gallery_center").src= "../../resources/image/a0"+num+".jpg";
-            document.getElementById("gallery_right").src= "../../resources/image/a0"+(num_right)+".jpg";
+            document.getElementById("gallery_left").src= "./a0"+(num_left)+".jpg";
+            document.getElementById("gallery_center").src= "./a0"+num+".jpg";
+            document.getElementById("gallery_right").src= "./a0"+(num_right)+".jpg";
             return false;
         }
         function next(){
@@ -41,13 +69,13 @@
             if(num_left==5){
                 num_left=1;
             }
-            document.getElementById("gallery_left").src= "../../resources/image/a0"+(num_left)+".jpg";
-            document.getElementById("gallery_center").src= "../../resources/image/a0"+num+".jpg";
-            document.getElementById("gallery_right").src= "../../resources/image/a0"+(num_right)+".jpg";
+            document.getElementById("gallery_left").src= "./a0"+(num_left)+".jpg";
+            document.getElementById("gallery_center").src= "./a0"+num+".jpg";
+            document.getElementById("gallery_right").src= "./a0"+(num_right)+".jpg";
             return false;
         }
         $(function(){
-            $(".best>a").hover(
+            $(".banner>a").hover(
                 function(){
                     $(this).parent().children("div").fadeIn('slow');
                     $(this).parent().children("div").css("display","block"); 
@@ -58,7 +86,7 @@
             );
         });
         $(function(){
-            $(".new>a").hover(
+            $(".banner2>a").hover(
                 function(){
                     $(this).parent().children("div").fadeIn('slow');
                     $(this).parent().children("div").css("display","block"); 
@@ -67,37 +95,203 @@
                     $(this).parent().children("div").fadeOut();
                 }
             );
+        });
+
+        //header 눌렀을 때
+        $(function(){
+            $("#best_nav").click(function(){
+                $("#menu2").css("display","block");
+                $("#menu2").siblings().css("display","none");
+            });
+            $("#new_nav").click(function(){
+                $("#menu3").css("display","block");
+                $("#menu3").siblings().css("display","none");
+            });
+            $("#outer_nav").click(function(){
+                $("#menu4").css("display","block");
+                $("#menu4").siblings().css("display","none");
+            });
+            $("#top_nav").click(function(){
+                $("#menu5").css("display","block");
+                $("#menu5").siblings().css("display","none");
+            });
+            $("#pants_nav").click(function(){
+                $("#menu6").css("display","block");
+                $("#menu6").siblings().css("display","none");
+            });
+            $("#acc_nav").click(function(){
+                $("#menu7").css("display","block");
+                $("#menu7").siblings().css("display","none");
+            });
         });
     </script>
 
 </head>
 <body>
-    <div id="header">
-    </div>
+    <Header>
+        <!-- Header -->
+        <div id="header-wrap">
+            <div class="state-loginOff">
+                <form action="">
+                    <div class="header-btn">
+                        <input type="search" class="search-input" placeholder="상품 검색">
+                        <input type="submit" class="search-btn" value="검색">
+                    </div>
+                </form>
+    
+                <a href="/login/loginform" class="topbtn">로그인</a>
+                <a href="/login/membershipform" class="topbtn">회원가입</a>
+                <a href="#" class="topbtn">장바구니</a>
+                <a href="/mypage" class="topbtn">마이페이지</a>
+            </div>
+            <h1 class="mainLogo">
+                <a href="/main">
+                    Shopping Mall
+                    <!-- <img src="logo.png" alt="Shopping Mall"> -->
+                </a>
+            </h1>
+        </div>
+    
+        <!--  내비게이션 바 -->
+        <div class="nav-wrap">
+            <a href="#" class="nav-cate" id="best_nav">BEST</a>
+            <a href="#" class="nav-cate" id="new_nav">NEW</a>
+            <a href="#" class="nav-cate" id="outer_nav">OUTER</a>
+            <a href="#" class="nav-cate" id="top_nav">TOP</a>
+            <a href="#" class="nav-cate" id="pants_nav">PANTS</a>
+            <a href="#" class="nav-cate" id="acc_nav">ACC</a>
+        </div>
+    </Header>
     <div id="body">
         <div id="main">
             <a href="" onclick="return prev();">◀</a>
-            <img src="../../resources/image/a04.jpg" id="gallery_left">
-            <img src="../../resources/image/a01.jpg" id="gallery_center">
-            <img src="../../resources/image/a02.jpg" id="gallery_right">
+            <img src="./a04.jpg" id="gallery_left">
+            <img src="./a01.jpg" id="gallery_center">
+            <img src="./a02.jpg" id="gallery_right">
             <a href="" onclick="return next();">▶</a>
         </div>
         <br><br><br>
-        
-        <div id="bestmenu">
-            <h3>Best</h3>
-            <div class="best"><a href=""><img src="../../resources/image/a01.jpg"></a><div>테스트</div></div>
-            <div class="best"><a href=""><img src="../../resources/image/a02.jpg"></a><div>테스트</div></div>
-            <div class="best"><a href=""><img src="../../resources/image/a03.jpg"></a><div>테스트</div></div>
-            <div class="best"><a href=""><img src="../../resources/image/a04.jpg"></a><div>테스트</div></div>
+
+        <div id="menu">
+        <div id="menu1">
+            <div id="banner">
+               <h3>Best</h3>
+              <div class="banner"><a href=""><img src="./a01.jpg"></a><div>테스트</div></div>
+              <div class="banner"><a href=""><img src="./a02.jpg"></a><div>테스트</div></div>
+               <div class="banner"><a href=""><img src="./a03.jpg"></a><div>테스트</div></div>
+               <div class="banner"><a href=""><img src="./a04.jpg"></a><div>테스트</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">New</h3>
+              <div class="banner2"><a href=""><img src="./d17.jpg"></a><div>테스트</div></div>
+              <div class="banner2"><a href=""><img src="./d18.jpg"></a><div>테스트</div></div>
+              <div class="banner2"><a href=""><img src="./d19.jpg"></a><div>테스트</div></div>
+              <div class="banner2"><a href=""><img src="./d20.gif"></a><div>테스트</div></div>
+            </div>
         </div>
-        <br>
-        <div id="newmenu">
-            <h3 style="margin-top: 50px;">New</h3>
-            <div class="new"><a href=""><img src="../../resources/image/d17.jpg"></a><div>테스트</div></div>
-            <div class="new"><a href=""><img src="../../resources/image/d18.jpg"></a><div>테스트</div></div>
-            <div class="new"><a href=""><img src="../../resources/image/d19.jpg"></a><div>테스트</div></div>
-            <div class="new"><a href=""><img src="../../resources/image/d20.gif"></a><div>테스트</div></div>
+        <div id="menu2">
+            <div id="banner">
+               <h3>주간 Best</h3>
+              <div class="banner"><a href=""><img src="./a01.jpg"></a><div>테스트2</div></div>
+              <div class="banner"><a href=""><img src="./a02.jpg"></a><div>테스트2</div></div>
+               <div class="banner"><a href=""><img src="./a03.jpg"></a><div>테스트2</div></div>
+               <div class="banner"><a href=""><img src="./a04.jpg"></a><div>테스트2</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">월간 Best</h3>
+              <div class="banner2"><a href=""><img src="./d17.jpg"></a><div>테스트2</div></div>
+              <div class="banner2"><a href=""><img src="./d18.jpg"></a><div>테스트2</div></div>
+              <div class="banner2"><a href=""><img src="./d19.jpg"></a><div>테스트2</div></div>
+              <div class="banner2"><a href=""><img src="./d20.gif"></a><div>테스트2</div></div>
+            </div>
+        </div>
+        <div id="menu3">
+            <div id="banner">
+               <h3>주간 new</h3>
+              <div class="banner"><a href=""><img src="./a01.jpg"></a><div>테스트3</div></div>
+              <div class="banner"><a href=""><img src="./a02.jpg"></a><div>테스트3</div></div>
+               <div class="banner"><a href=""><img src="./a03.jpg"></a><div>테스트3</div></div>
+               <div class="banner"><a href=""><img src="./a04.jpg"></a><div>테스트3</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">월간 new</h3>
+              <div class="banner2"><a href=""><img src="./d17.jpg"></a><div>테스트3</div></div>
+              <div class="banner2"><a href=""><img src="./d18.jpg"></a><div>테스트3</div></div>
+              <div class="banner2"><a href=""><img src="./d19.jpg"></a><div>테스트3</div></div>
+              <div class="banner2"><a href=""><img src="./d20.gif"></a><div>테스트3</div></div>
+            </div>
+        </div>
+        <div id="menu4">
+            <div id="banner">
+               <h3>아우터 Best</h3>
+              <div class="banner"><a href=""><img src="./a01.jpg"></a><div>테스트4</div></div>
+              <div class="banner"><a href=""><img src="./a02.jpg"></a><div>테스트4</div></div>
+               <div class="banner"><a href=""><img src="./a03.jpg"></a><div>테스트4</div></div>
+               <div class="banner"><a href=""><img src="./a04.jpg"></a><div>테스트4</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">아우터 new</h3>
+              <div class="banner2"><a href=""><img src="./d17.jpg"></a><div>테스트4</div></div>
+              <div class="banner2"><a href=""><img src="./d18.jpg"></a><div>테스트4</div></div>
+              <div class="banner2"><a href=""><img src="./d19.jpg"></a><div>테스트4</div></div>
+              <div class="banner2"><a href=""><img src="./d20.gif"></a><div>테스트4</div></div>
+            </div>
+        </div>
+        <div id="menu5">
+            <div id="banner">
+               <h3>상의 best</h3>
+              <div class="banner"><a href=""><img src="./a01.jpg"></a><div>테스트5</div></div>
+              <div class="banner"><a href=""><img src="./a02.jpg"></a><div>테스트5</div></div>
+               <div class="banner"><a href=""><img src="./a03.jpg"></a><div>테스트5</div></div>
+               <div class="banner"><a href=""><img src="./a04.jpg"></a><div>테스트5</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">상의 신상품</h3>
+              <div class="banner2"><a href=""><img src="./d17.jpg"></a><div>테스트5</div></div>
+              <div class="banner2"><a href=""><img src="./d18.jpg"></a><div>테스트5</div></div>
+              <div class="banner2"><a href=""><img src="./d19.jpg"></a><div>테스트5</div></div>
+              <div class="banner2"><a href=""><img src="./d20.gif"></a><div>테스트5</div></div>
+            </div>
+        </div>
+        <div id="menu6">
+            <div id="banner">
+               <h3>하의 best</h3>
+              <div class="banner"><a href=""><img src="./a01.jpg"></a><div>테스트6</div></div>
+              <div class="banner"><a href=""><img src="./a02.jpg"></a><div>테스트6</div></div>
+               <div class="banner"><a href=""><img src="./a03.jpg"></a><div>테스트6</div></div>
+               <div class="banner"><a href=""><img src="./a04.jpg"></a><div>테스트6</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">pants 신상품</h3>
+              <div class="banner2"><a href=""><img src="./d17.jpg"></a><div>테스트6</div></div>
+              <div class="banner2"><a href=""><img src="./d18.jpg"></a><div>테스트6</div></div>
+              <div class="banner2"><a href=""><img src="./d19.jpg"></a><div>테스트6</div></div>
+              <div class="banner2"><a href=""><img src="./d20.gif"></a><div>테스트6</div></div>
+            </div>
+        </div>
+        <div id="menu7">
+            <div id="banner">
+               <h3>악세서리 best</h3>
+              <div class="banner"><a href=""><img src="./a01.jpg"></a><div>테스트7</div></div>
+              <div class="banner"><a href=""><img src="./a02.jpg"></a><div>테스트7</div></div>
+               <div class="banner"><a href=""><img src="./a03.jpg"></a><div>테스트7</div></div>
+               <div class="banner"><a href=""><img src="./a04.jpg"></a><div>테스트7</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">악세서리 신상품</h3>
+              <div class="banner2"><a href=""><img src="./d17.jpg"></a><div>테스트7</div></div>
+              <div class="banner2"><a href=""><img src="./d18.jpg"></a><div>테스트7</div></div>
+              <div class="banner2"><a href=""><img src="./d19.jpg"></a><div>테스트7</div></div>
+              <div class="banner2"><a href=""><img src="./d20.gif"></a><div>테스트7</div></div>
+            </div>
+        </div>
         </div>
     </div>
 </body>
