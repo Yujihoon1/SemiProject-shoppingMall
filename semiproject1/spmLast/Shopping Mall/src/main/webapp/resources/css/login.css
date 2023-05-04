@@ -1,0 +1,60 @@
+@charset "UTF-8";
+.login{        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+#main-title{
+    padding: 30px auto 50px auto;
+    text-align: center;
+    font-size: 30px;
+}
+.loginform{
+    display: flex;
+    column-gap: 8px;
+}
+.userID{
+    margin-bottom:10px;
+    padding:3px;
+    width:250px;
+    height:30px;
+}
+#button{
+    width:100%;
+    padding:20px;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+.logo{
+    margin-top:0px;
+    margin-bottom:40px; 
+    font-size:50px;   
+}
+.find{
+    margin-top:20px;
+    font-size:small;    
+}
+#fin{
+    text-decoration-line: none;
+    color:inherit;
+}
+.img{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-top:20px;
+}
+#snsimg{
+    border:1px solid white;
+    border-radius: 70%;
+    overflow:hidden;
+    object-fit: cover;
+}
+#header{
+    height:200px;
+}

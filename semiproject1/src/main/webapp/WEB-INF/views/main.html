@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../resources/css/main.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+        let num = 1;
+        let num_left=num-1;
+        let num_right= num+1;
+
+        var intervalId = setInterval(automove, 3000);
+
+        function stopInterval (intervalId) {
+          clearInterval(intervalId);
+        }
+
+        setTimeout(stopInterval, 60000, intervalId)
+
+        function automove(){
+            num++;
+            num_left++;
+            num_right++;
+            if(num>4){
+                num=1;
+            }
+            if(num_right==5){
+                num_right=1;
+            }
+            if(num_left==5){
+                num_left=1;
+            }
+            document.getElementById("gallery_left").src= "../../resources/image/a0"+(num_left)+".jpg";
+            document.getElementById("gallery_center").src= "../../resources/image/a0"+num+".jpg";
+            document.getElementById("gallery_right").src= "../../resources/image/a0"+(num_right)+".jpg";
+            return false;
+            
+        };
+
+        function prev(){
+            num--;
+            num_left--;
+            num_right--;
+            if(num<1){
+                num=4;
+            }else if(num_left==0){
+                num_left=4;
+            }else if(num_right==0){
+                num_right=4;
+            }
+            document.getElementById("gallery_left").src= "../../resources/image/a0"+(num_left)+".jpg";
+            document.getElementById("gallery_center").src= "../../resources/image/a0"+num+".jpg";
+            document.getElementById("gallery_right").src= "../../resources/image/a0"+(num_right)+".jpg";
+            return false;
+        }
+        function next(){
+            num++;
+            num_left++;
+            num_right++;
+            if(num>4){
+                num=1;
+            }
+            if(num_right==5){
+                num_right=1;
+            }
+            if(num_left==5){
+                num_left=1;
+            }
+            document.getElementById("gallery_left").src= "../../resources/image/a0"+(num_left)+".jpg";
+            document.getElementById("gallery_center").src= "../../resources/image/a0"+num+".jpg";
+            document.getElementById("gallery_right").src= "../../resources/image/a0"+(num_right)+".jpg";
+            return false;
+        }
+        $(function(){
+            $(".banner>a").hover(
+                function(){
+                    $(this).parent().children("div").fadeIn('slow');
+                    $(this).parent().children("div").css("display","block"); 
+                },
+                function(){
+                    $(this).parent().children("div").fadeOut();
+                }
+            );
+        });
+        $(function(){
+            $(".banner2>a").hover(
+                function(){
+                    $(this).parent().children("div").fadeIn('slow');
+                    $(this).parent().children("div").css("display","block"); 
+                },
+                function(){
+                    $(this).parent().children("div").fadeOut();
+                }
+            );
+        });
+
+    </script>
+
+</head>
+<body>
+    <Header>
+        <!-- Header -->
+        <div id="header-wrap">
+            <div class="state-loginOff">
+                <form action="">
+                    <div class="header-btn">
+                        <input type="search" class="search-input" placeholder="상품 검색">
+                        <input type="submit" class="search-btn" value="검색">
+                    </div>
+                </form>
+    
+                <a href="/login/loginform" class="topbtn">로그인</a>
+                <a href="/login/membershipform" class="topbtn">회원가입</a>
+                <a href="#" class="topbtn">장바구니</a>
+                <a href="/mypage" class="topbtn">마이페이지</a>
+            </div>
+            <h1 class="mainLogo">
+                <a href="/main">
+                    Shopping Mall
+                    <!-- <img src="logo.png" alt="Shopping Mall"> -->
+                </a>
+            </h1>
+        </div>
+    
+        <!--  내비게이션 바 -->
+        <div class="nav-wrap">
+            <a href="#" class="nav-cate" id="best_nav">BEST</a>
+            <a href="#" class="nav-cate" id="new_nav">NEW</a>
+            <a href="#" class="nav-cate" id="outer_nav">OUTER</a>
+            <a href="#" class="nav-cate" id="top_nav">TOP</a>
+            <a href="#" class="nav-cate" id="pants_nav">PANTS</a>
+            <a href="#" class="nav-cate" id="acc_nav">ACC</a>
+        </div>
+    </Header>
+    <div id="body">
+        <div id="main">
+            <a href="" onclick="return prev();">◀</a>
+            <img src="../../resources/image/a04.jpg" id="gallery_left">
+            <img src="../../resources/image/a01.jpg" id="gallery_center">
+            <img src="../../resources/image/a02.jpg" id="gallery_right">
+            <a href="" onclick="return next();">▶</a>
+        
+        <br><br><br>
+
+        <div id="menu">
+        <div id="menu1">
+            <div id="banner">
+               <h3>Best</h3>
+              <div class="banner"><a href=""><img src="../../resources/image/a01.jpg"></a><div>테스트</div></div>
+              <div class="banner"><a href=""><img src="../../resources/image/a02.jpg"></a><div>테스트</div></div>
+               <div class="banner"><a href=""><img src="../../resources/image/a03.jpg"></a><div>테스트</div></div>
+               <div class="banner"><a href=""><img src="../../resources/image/a04.jpg"></a><div>테스트</div></div>
+            </div>
+            <br>
+            <div id="banner2">
+              <h3 style="margin-top: 50px;">New</h3>
+              <div class="banner2"><a href=""><img src="../../resources/image/d17.jpg"></a><div>테스트</div></div>
+              <div class="banner2"><a href=""><img src="../../resources/image/d18.jpg"></a><div>테스트</div></div>
+              <div class="banner2"><a href=""><img src="../../resources/image/d19.jpg"></a><div>테스트</div></div>
+              <div class="banner2"><a href=""><img src="../../resources/image/d20.gif"></a><div>테스트</div></div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+        </div>
+    </div>
+    <br><br><br>
+    <!-- Footer -->
+    <hr class="footer-hr">
+    <footer>
+        <span>COMPANY : 쇼핑몰이름</span><br>
+        <span>ADDRESS : 서울특별시 서초구 서초로 132 14층(서초동, 서울서초빌딩)</span><br>
+        <span>CALL : 1688-1234</span><br><br>
+        <span>Copyright &copy; by 쇼핑몰이름. All Rights Reserved.</span>
+    </footer>
+</body>
+</html>
